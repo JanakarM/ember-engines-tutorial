@@ -1,0 +1,16 @@
+
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"></head>
+<div >
+    <h3 style="margin-top:20px;margin-left:10px;">UPDATE  &nbsp;NOTES  &nbsp;PAGE</h3>
+  <form action="#" class="div">
+    {{!-- {{#link-to "update-notes" id="load" invokeAction=loads}}load data{{/link-to}} --}}
+    {{#each model as |note|}}
+    <label>BOOKID</label><input  type="text" id="id" readonly="readonly" value={{note.id}}/><br/><br/>
+          <label>BOOKNAME</label><input  type="text" id="name"  value={{note.name}}/><br/><br/>
+                <label>CONTENTS</label><input  type="text" id="contents"  value={{note.contents}}/><br/><br/>
+               <input type="button" style="margin-left: 250px;margin-top:15px" id='update'  value="UPDATE" />
+            <input style="margin-left: 15px;" type="reset" value="CLEAR" />
+ {{/each}}   
+  </form>
+  </div>
+{{outlet}}

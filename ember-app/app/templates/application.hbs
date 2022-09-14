@@ -1,0 +1,31 @@
+{{!-- The following component displays Ember's default welcome message. --}}
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"></head>
+<div>
+    <ul>
+       <li>{{#link-to 'view-notes' type="button" invokeAction=sess}}
+    Notes
+  {{/link-to}}</li>
+       {{!-- <li>{{#link-to 'signup' type="button"  invokeAction=sess}}
+    SignUp
+  {{/link-to}}</li> --}}
+       <li> {{#link-to 'view-emp' type="button" invokeAction=sess}}
+    Contacts
+  {{/link-to}}</li>
+        {{!-- <li>{{#link-to 'view-emp' type="button"}}
+    ViewEmployee
+  {{/link-to}}</li> --}}
+  <li>{{#link-to 'add-emp' type="button"  invokeAction=sess}}
+    Update Profile
+  {{/link-to}}</li>
+        <li>{{#link-to 'login' type="button" invokeAction=logout}}
+    Logout
+  {{/link-to}}</li>
+    <li>{{#link-to 'deleteaccount' type="button"  invokeAction=sess}}
+    DeleteAccount
+  {{/link-to}}</li>
+    </ul>
+    {{message}}
+</div>
+{{!-- Feel free to remove this! --}}
+
+{{outlet}}

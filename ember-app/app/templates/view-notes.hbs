@@ -1,0 +1,34 @@
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"></head>
+ <h3 style="margin-top:20px;margin-left:10px;">Notes &nbsp;</h3>
+  <div class="div_table">
+ 
+{{view-notes}}
+<table>
+  <tr>
+      <th></th>
+    <th>NotesId      <button type="button" class="sortbtn" id="1a" {{action fn 1}} >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></th>
+    <th>NotesName    <button type="button" class="sortbtn" id="2a" {{action fn 2}} >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></th>
+    <th>content     <button type="button" class="sortbtn" id="3a" {{action fn 3}} >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></th>
+  </tr>
+  {{#each model as |book|}}
+  {{!-- {{t-r name=book.name id=book.id contents=book.contents }} --}}
+  
+<tr>
+    <td><input type="checkbox" class="checkbox" name="cb" value={{book.id}}></td>
+<td>{{book.id}}</td>
+<td>{{book.name}}</td>
+<td>{{book.contents}}</td>
+</tr>
+  {{/each}}
+  </table>
+</div>
+ <button style="margin-top: 20px" class="signup">{{#link-to 'update-notes' invokeAction=update}}
+    Update Notes
+  {{/link-to}}</button>
+  <button style="margin-top: 20px" class="signup">{{#link-to 'view-notes' invokeAction=delete}}
+    Delete Notes
+  {{/link-to}}</button>
+     <button  class="signup" style="margin:top=20px">{{#link-to 'add-notes' type="button"}}
+    Add Notes
+  {{/link-to}}</button>
+{{outlet}}
