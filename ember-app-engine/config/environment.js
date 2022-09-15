@@ -3,9 +3,11 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ember-app-engine',
+    podModulePrefix: 'ember-app-engine/pods',
     environment,
-    rootURL: '/',
-    locationType: 'auto',
+    // rootURL: '/',
+    rootURL: '/ember_engine_app/',//NO I18N
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

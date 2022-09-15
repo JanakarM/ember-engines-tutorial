@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.mount('in-app-blog', {path: 'blog'});
   this.mount('post-engine', {path: 'post'});
+  this.mount('engine-1');
 });
 
 export default Router;

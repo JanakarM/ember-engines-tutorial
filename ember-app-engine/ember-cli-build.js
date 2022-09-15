@@ -5,6 +5,14 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    assetLoader: {
+      generateURI: function (filePath) {
+        // if we have specified something to prepend, and the file is in engines-dist...
+        if (filePath.indexOf('engines-dist') > -1) {
+          return `/ember_engine_app${filePath}`;
+        }
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
