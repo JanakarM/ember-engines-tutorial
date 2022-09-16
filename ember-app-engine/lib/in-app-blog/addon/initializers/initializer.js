@@ -1,5 +1,3 @@
-import { getOwner } from '@ember/application';
-
 export default {
 	name: 'initializer',//No I18N
 	initialize: function(application)

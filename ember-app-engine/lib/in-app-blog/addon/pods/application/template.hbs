@@ -1,2 +1,5 @@
-<h1>Blog Engine App {{GLOBAL_DATA_MODEL.name}}</h1>
-{{outlet}}
+<div style="margin: 500px;">
+    <h1>Blog Engine App {{GLOBAL_DATA_MODEL.name}}</h1>
+    {{#link-to 'sub-blog'}}In App Blog{{/link-to}}
+    {{outlet}}
+</div>

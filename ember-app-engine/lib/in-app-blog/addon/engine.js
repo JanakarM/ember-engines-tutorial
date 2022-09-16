@@ -13,7 +13,7 @@ const Eng = Engine.extend({
 		services: [
 			'GLOBAL_DATA_MODEL'
 		]
-}
+	}
 });
 
 loadInitializers(Eng, modulePrefix);
