@@ -8,6 +8,9 @@ module.exports = function(environment) {
     // rootURL: '/',
     rootURL: '/ember_engine_app/',//NO I18N
     locationType: 'hash',
+    engines: [
+      "in-app-blog"
+    ],
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
